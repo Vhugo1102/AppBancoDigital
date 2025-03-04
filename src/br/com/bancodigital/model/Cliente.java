@@ -1,7 +1,8 @@
 package br.com.bancodigital.model;
 
 public class Cliente {
-    private String nome;
+	private int idCliente;
+	private String nome;
     private String email;
     private String telefone;
     private String cpf;
@@ -10,24 +11,37 @@ public class Cliente {
     private String cidade;
     private String uf;
 
-    // Construtor
-    public Cliente(String nome, String email, String telefone, String cpf, String endereco, String cep, String cidade, String uf) {
-        this.nome = nome;
-        this.email = email;
-        this.telefone = telefone;
-        this.cpf = cpf;
-        this.endereco = endereco;
-        this.cep = cep;
-        this.cidade = cidade;
-        this.uf = uf;
-    }
+    
 
-    // Getters e setters
+    public Cliente(int idCliente, String nome, String email, String telefone, String cpf, String endereco, String cep,
+			String cidade, String uf) {
+		super();
+		this.idCliente = idCliente;
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+		this.cpf = cpf;
+		this.endereco = endereco;
+		this.cep = cep;
+		this.cidade = cidade;
+		this.uf = uf;
+	}
+
+	// Getters e setters
+    
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public int getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
+	}
+
+	public void setNome(String nome) {
         this.nome = nome;
     }
 
