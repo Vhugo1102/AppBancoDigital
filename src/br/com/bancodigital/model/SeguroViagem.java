@@ -67,4 +67,6 @@ public class SeguroViagem {
                 ", destino='" + destino + '\'' +
                 '}';
     }
+    
+
 }

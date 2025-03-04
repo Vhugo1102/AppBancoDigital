@@ -12,7 +12,17 @@ public class CartaoController {
     public CartaoController(CartaoDAO cartaoDAO) {
         this.cartaoDAO = cartaoDAO;
     }
+    
+    public void criarCartaoCredito(int numeroCartao, double limiteCredito, double saldoDisponivel, String dataValidade, String codigoSeguranca) {
+        CartaoCredito cartao = new CartaoCredito(numeroCartao, limiteCredito, saldoDisponivel, dataValidade, codigoSeguranca);
+        emitirCartaoCredito(cartao);
+    }
 
+    public void criarCartaoDebito(int numeroCartao, double limiteDiario, String dataValidade, String codigoSeguranca) {
+        CartaoDebito cartao = new CartaoDebito(numeroCartao, limiteDiario, dataValidade, codigoSeguranca);
+        emitirCartaoDebito(cartao);
+    }
+    
     public void emitirCartaoCredito(CartaoCredito cartao) {
         cartaoDAO.emitirCartaoCredito(cartao);
     }
