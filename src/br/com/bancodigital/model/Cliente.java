@@ -1,6 +1,7 @@
 package br.com.bancodigital.model;
 
 public class Cliente {
+	
 	private int idCliente;
 	private String nome;
     private String email;
@@ -12,7 +13,6 @@ public class Cliente {
     private String uf;
 
     
-
     public Cliente(int idCliente, String nome, String email, String telefone, String cpf, String endereco, String cep,
 			String cidade, String uf) {
 		super();
